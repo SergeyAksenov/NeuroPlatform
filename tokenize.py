@@ -8,22 +8,21 @@ import re
 class base_tokenizer:
 
 
-    def __init__(self, stop_words=None):
-        self.language=''
+    def __init__(self, language='English',stop_words=None):
+        self.language=language
         if not stop_words == None:
             self.stop_words = stop_words
-
+        else:
+            self.stop_words = set()
 
     def tokenize(self, input, input_delimiters=None, output_delimiter=' '):
         terms = []
         if input_delimiters == None:
             terms = re.findall(r"[\w']+", input)
         else:
-            #splits = " |".join(input_delimiters)
-           # print(splits)
             terms = re.split("|".join(input_delimiters), input)
-            #terms = re.split('; |, |\*|\n|\.|\?|!|\t', input)
-        return output_delimiter.join(terms)
+        terms_without_stopwords = [t for t in terms if t not in self.stop_words and len(t) > 0]
+        return output_delimiter.join(terms_without_stopwords)
 
 
 ########################################################################################################################
