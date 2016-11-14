@@ -1,6 +1,7 @@
 __author__ = 'Sergey'
 
-from some import some_class
+from tokenize import *
 
+bt = base_tokenizer_factory().get_tokenizer()
 
-smc = some_class(300)
+print bt.tokenize("Hello, my name is??... Sergey!!",input_delimiters=['\?','\.','\n',';','!'])
