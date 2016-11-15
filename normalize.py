@@ -4,6 +4,8 @@ __author__ = 'Sergey'
 import re
 import stem
 
+#To do: refactor and rewrite code of porter stemmer
+
 ########################################################################################################################
 
 

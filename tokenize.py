@@ -2,6 +2,8 @@ __author__ = 'Sergey'
 
 import re
 
+#to do: consider other ways of splitting input string
+
 ########################################################################################################################
 
 
