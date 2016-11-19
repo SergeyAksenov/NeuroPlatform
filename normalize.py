@@ -12,11 +12,11 @@ import stem
 class base_normalizer:
 
 
-    def __init__(self,):
-        self.language=''
+    def __init__(self,language=''):
+        self.language=language
 
-    def normalize(self, input, output_delimiter=' '):
-
+    def normalize(self, input, input_delimiter=' ', output_delimiter=' '):
+        return input
 
 
 ########################################################################################################################
