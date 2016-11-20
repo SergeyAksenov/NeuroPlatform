@@ -58,7 +58,7 @@ class base_stemmer_factory:
 
 class base_stemmer:
 
-    def stem(self,word):
+    def stem(self, word):
         return word
 
 
