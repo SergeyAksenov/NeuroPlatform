@@ -27,8 +27,8 @@ class base_frequency_processor_factory:
     def __init__(self, language='English'):
         self.language = 'English'
 
-    def get_frequency_matrix_creator(self, context_size=3):
-        return base_frequency_processor(self.language, context_size=context_size)
+    def get_frequency_processor(self, context_size=3):
+        return base_frequency_processor(language=self.language, context_size=context_size)
 
 
 ########################################################################################################################
